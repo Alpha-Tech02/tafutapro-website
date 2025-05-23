@@ -157,6 +157,11 @@ nav {
     display: flex;
   }
 
+  .nav-links.active {
+    display: flex;
+  }
+
+
   .hidden-link {
     display: block;
   }
