@@ -116,9 +116,7 @@ nav {
   padding-bottom: 5px;
 }
 
-.hidden-link {
-  display: none;
-}
+
 
 /* Hamburger icon */
 .burger {
@@ -137,19 +135,19 @@ nav {
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
-  .nav {
+  .nav-links {
     display: none;
+    flex-direction: column;
+    background: white;
     position: absolute;
     top: 70px;
     right: 30px;
-    flex-direction: column;
-    background-color: #fff;
+    padding: 15px;
     border: 1px solid #ddd;
-    width: 200px;
-    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
 
-  .nav.active {
+  .nav-links.show {
     display: flex;
   }
 
@@ -157,13 +155,12 @@ nav {
     display: flex;
   }
 
-  .nav-links.active {
-    display: flex;
+  .nav-links li.hidden-link {
+    display: block;
   }
 
-
-  .hidden-link {
-    display: block;
+  .nav-links li:not(.hidden-link) {
+    display: none;
   }
 }
 
