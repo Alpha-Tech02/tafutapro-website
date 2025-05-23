@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Provider Signup - TafutaPro</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Basic form styling */
+    .signup-container {
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fff;
+    }
+    .signup-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .signup-container label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: 600;
+      color: #555;
+    }
+    .signup-container input,
+    .signup-container select,
+    .signup-container textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+    .signup-container textarea {
+      resize: vertical;
+      height: 100px;
+    }
+    .signup-container button {
+      margin-top: 20px;
+      width: 100%;
+      background-color: #ffc107; /* gold/yellow */
+      color: #222;
+      font-size: 18px;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+    .signup-container button:hover {
+      background-color: #e0a800;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Provider Signup Form</h2>
+    <form action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+      <label for="name">Full Name *</label>
+      <input type="text" id="name" name="Name" required />
+
+      <label for="email">Email Address *</label>
+      <input type="email" id="email" name="Email" required />
+
+      <label for="phone">Phone Number *</label>
+      <input type="tel" id="phone" name="Phone" required />
+
+      <label for="category">Service Category *</label>
+      <select id="category" name="Category" required>
+        <option value="">-- Select Category --</option>
+        <option value="Makeup Artists">Makeup Artists</option>
+        <option value="Plumbers">Plumbers</option>
+        <option value="Photographers">Photographers</option>
+        <option value="Graphic Designers">Graphic Designers</option>
+        <option value="Tutors">Tutors</option>
+        <option value="Cleaners">Cleaners</option>
+        <option value="Electricians">Electricians</option>
+        <option value="Hairdressers">Hairdressers</option>
+        <!-- Add other categories -->
+      </select>
+
+      <label for="location">Location *</label>
+      <input type="text" id="location" name="Location" placeholder="e.g., Nairobi, Mombasa" required />
+
+      <label for="description">Brief Description / Expertise *</label>
+      <textarea id="description" name="Description" placeholder="Tell us about your skills or experience" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

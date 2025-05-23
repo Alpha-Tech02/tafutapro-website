@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Post a Job - TafutaPro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>TafutaPro</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="categories.html">Categories</a>
+        <a href="post-job.html" class="active">Post a Job</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Post a Job</h2>
+    <form id="jobForm" class="job-form">
+      <label for="title">Job Title</label>
+      <input type="text" id="title" name="title" placeholder="e.g., Need a Plumber" required />
+
+      <label for="category">Category</label>
+      <select id="category" name="category" required>
+        <option value="">Select a Category</option>
+        <option value="plumbers">Plumbers</option>
+        <option value="makeup-artists">Makeup Artists</option>
+        <option value="photographers">Photographers</option>
+        <option value="graphic-designers">Graphic Designers</option>
+        <option value="tutors">Tutors</option>
+        <option value="cleaners">Cleaners</option>
+        <!-- Add more if needed -->
+      </select>
+
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location" placeholder="e.g., Nairobi" required />
+
+      <label for="description">Job Description</label>
+      <textarea id="description" name="description" rows="5" placeholder="Describe the job in detail..." required></textarea>
+
+      <button type="submit">Post Job</button>
+    </form>
+
+    <div id="successMessage" style="display: none; margin-top: 20px; color: green;">
+      🎉 Your job has been posted successfully!
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 TafutaPro. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('jobForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // You could add more form validation here if needed
+
+      // Show success message
+      document.getElementById('successMessage').style.display = 'block';
+
+      // Optionally clear the form
+      this.reset();
+    });
+  </script>
+</body>
+</html>
