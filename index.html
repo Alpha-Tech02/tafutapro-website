@@ -1,39 +1,23 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TafutaPro - Find Trusted Professionals in Kenya</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <nav class="navbar">
-      <div class="logo">
-        <a href="index.html">TafutaPro</a>
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="categories.html">Categories</a></li>
-        <li><a href="post-job.html">Post a Job</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="burger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
+    <nav>
+  <ul class="nav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="categories.html">Categories</a></li>
+    <li><a href="post-job.html">Post a Job</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="signup.html">Sign Up</a></li>
+  </ul>
+</nav>
 
-    <ul class="nav-dropdown">
-      <li><a href="about.html">About</a></li>
-      <li><a href="listings.html">Listings</a></li>
-      <li><a href="login.html">Login</a></li>
-      <li><a href="signup.html">Sign Up</a></li>
-      <li><a href="provider-signup.html">Provider Sign Up</a></li>
-      <li><a href="profile.html">Profile</a></li>
-    </ul>
 
     <div class="container">
       <h1>TafutaPro</h1>
@@ -47,16 +31,18 @@
   </header>
 
   <section class="popular-categories">
-    <h2>Popular Categories</h2>
-    <div class="category-grid">
-      <a href="listings.html?category=makeup-artists" class="category-card">Makeup Artists</a>
-      <a href="listings.html?category=plumbers" class="category-card">Plumbers</a>
-      <a href="listings.html?category=photographers" class="category-card">Photographers</a>
-      <a href="listings.html?category=graphic-designers" class="category-card">Graphic Designers</a>
-      <a href="listings.html?category=tutors" class="category-card">Tutors</a>
-      <a href="listings.html?category=cleaners" class="category-card">Cleaners</a>
-    </div>
-  </section>
+  <h2>Popular Categories</h2>
+  <div class="category-grid">
+    <a href="listings.html?category=makeup-artists" class="category-card">Makeup Artists</a>
+    <a href="listings.html?category=plumbers" class="category-card">Plumbers</a>
+    <a href="listings.html?category=photographers" class="category-card">Photographers</a>
+    <a href="listings.html?category=graphic-designers" class="category-card">Graphic Designers</a>
+    <a href="listings.html?category=tutors" class="category-card">Tutors</a>
+    <a href="listings.html?category=cleaners" class="category-card">Cleaners</a>
+  </div>
+</section>
+
+
 
   <section class="featured container">
     <h2>Featured Professionals</h2>
@@ -87,14 +73,5 @@
       <p>&copy; 2025 TafutaPro. All rights reserved.</p>
     </div>
   </footer>
-
-  <script>
-    const burger = document.querySelector('.burger');
-    const dropdown = document.querySelector('.nav-dropdown');
-
-    burger.addEventListener('click', () => {
-      dropdown.classList.toggle('show');
-    });
-  </script>
 </body>
 </html>
