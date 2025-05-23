@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TafutaPro - Find Trusted Professionals in Kenya</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -16,8 +17,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="categories.html">Categories</a></li>
         <li><a href="post-job.html">Post a Job</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li class="hidden-link"><a href="signup.html">Sign Up</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="burger">
         <span></span>
@@ -25,6 +25,15 @@
         <span></span>
       </div>
     </nav>
+
+    <ul class="nav-dropdown">
+      <li><a href="about.html">About</a></li>
+      <li><a href="listings.html">Listings</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
+      <li><a href="provider-signup.html">Provider Sign Up</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
 
     <div class="container">
       <h1>TafutaPro</h1>
@@ -81,10 +90,10 @@
 
   <script>
     const burger = document.querySelector('.burger');
-    const navLinks = document.querySelector('.nav-links');
+    const dropdown = document.querySelector('.nav-dropdown');
 
     burger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+      dropdown.classList.toggle('show');
     });
   </script>
 </body>
