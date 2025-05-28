@@ -24,11 +24,27 @@
     <div class="container">
       <h1>TafutaPro</h1>
       <p>Search and connect with trusted professionals near you</p>
-      <form class="search-form">
-        <input type="text" placeholder="What service do you need? e.g., plumber, makeup artist" />
-        <input type="text" placeholder="Your location e.g., Nairobi" />
-        <button type="submit">Search</button>
-      </form>
+      <form class="search-form" id="searchForm">
+  <input type="text" id="serviceInput" placeholder="What service do you need? e.g., plumber, makeup artist" />
+  <input type="text" id="locationInput" placeholder="Your location e.g., Nairobi" />
+  <button type="submit">Search</button>
+</form>
+
+<script>
+  const searchForm = document.getElementById('searchForm');
+  searchForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const service = document.getElementById('serviceInput').value.trim();
+    const location = document.getElementById('locationInput').value.trim();
+
+    if (service && location) {
+      window.location.href = `listings.html?service=${encodeURIComponent(service)}&location=${encodeURIComponent(location)}`;
+    } else {
+      alert('Please fill in both fields.');
+    }
+  });
+</script>
+
     </div>
   </header>
 
