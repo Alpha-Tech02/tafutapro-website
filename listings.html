@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Listings - SkillSpot</title>
+  <title>Service Listings</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
-  <body>
+<body>
   <header>
     <h1>Service Providers</h1>
   </header>
@@ -17,7 +16,6 @@
   </main>
 
   <script>
-    // Example hardcoded providers
     const providers = [
       {
         name: "Fatuma – Tutor",
@@ -46,11 +44,11 @@
     const service = query.get("service")?.toLowerCase() || "";
     const location = query.get("location")?.toLowerCase() || "";
 
+    const resultsContainer = document.getElementById("providerResults");
+
     const filtered = providers.filter(p =>
       p.category.includes(service) && p.location.includes(location)
     );
-
-    const resultsContainer = document.getElementById("providerResults");
 
     if (filtered.length > 0) {
       resultsContainer.innerHTML = filtered.map(p => `
@@ -66,5 +64,4 @@
     }
   </script>
 </body>
-
 </html>
