@@ -41,8 +41,16 @@
     ];
 
     const query = new URLSearchParams(window.location.search);
-    const service = query.get("service")?.toLowerCase() || "";
-    const location = query.get("location")?.toLowerCase() || "";
+    let service = query.get("service")?.toLowerCase() || "";
+    let location = query.get("location")?.toLowerCase() || "";
+
+// Fallback for ?category= from category links
+    if (!service && query.get("category")) {
+    service = query.get("category").toLowerCase();
+
+
+    }
+
 
     const resultsContainer = document.getElementById("providerResults");
 
@@ -63,7 +71,7 @@
       resultsContainer.innerHTML = `<p>No service providers found for "${service}" in "${location}".</p>`;
     }
   </script>
-  <script src="listings.js"></script>
+  
 
 </body>
 </html>
