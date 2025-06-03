@@ -15,8 +15,6 @@
     <li><a href="post-job.html">Post a Job</a></li>
     <li><a href="login.html">Login</a></li>
     <li><a href="signup.html">Sign Up</a></li>
-    <li><a href="provider-signup.html">Become a Provider</a></li>
-
   </ul>
 </nav>
 
@@ -24,36 +22,13 @@
     <div class="container">
       <h1>TafutaPro</h1>
       <p>Search and connect with trusted professionals near you</p>
-      <form class="search-form" id="searchForm">
-  <input type="text" id="serviceInput" placeholder="What service do you need? e.g., plumber, makeup artist" />
-  <input type="text" id="locationInput" placeholder="Your location e.g., Nairobi" />
-  <button type="submit">Search</button>
-</form>
-
-<script>
-  const searchForm = document.getElementById('searchForm');
-  searchForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const service = document.getElementById('serviceInput').value.trim();
-    const location = document.getElementById('locationInput').value.trim();
-
-    if (service && location) {
-      window.location.href = `listings.html?service=${encodeURIComponent(service)}&location=${encodeURIComponent(location)}`;
-    } else {
-      alert('Please fill in both fields.');
-    }
-  });
-</script>
-
+      <form class="search-form">
+        <input type="text" placeholder="What service do you need? e.g., plumber, makeup artist" />
+        <input type="text" placeholder="Your location e.g., Nairobi" />
+        <button type="submit">Search</button>
+      </form>
     </div>
   </header>
-
-  <div class="cta-provider">
-  <h3>Are you a skilled professional?</h3>
-  <p>Join TafutaPro and get discovered by clients near you.</p>
-  <a href="provider-signup.html" class="btn-primary">Sign Up as a Provider</a>
-</div>
-
 
   <section class="popular-categories">
   <h2>Popular Categories</h2>
