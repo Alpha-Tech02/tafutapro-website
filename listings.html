@@ -3,75 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Service Listings</title>
+  <title>Listings - SkillSpot</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Service Providers</h1>
-  </header>
 
-  <main class="container" id="providerResults">
-    <p>Loading...</p>
-  </main>
+  <!-- Navbar -->
+  <nav>
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="post-job.html">Post a Job</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
+    </ul>
+  </nav>
 
-  <script>
-    const providers = [
-      {
-        name: "Fatuma – Tutor",
-        category: "tutor",
-        location: "nairobi",
-        image: "https://via.placeholder.com/150",
-        phone: "0722 123 456"
-      },
-      {
-        name: "Brian – Photographer",
-        category: "photographer",
-        location: "eldoret",
-        image: "https://via.placeholder.com/150",
-        phone: "0791 234 567"
-      },
-      {
-        name: "Martha – Mobile Braider",
-        category: "braider",
-        location: "nairobi",
-        image: "https://via.placeholder.com/150",
-        phone: "0712 345 678"
-      }
-    ];
-
-    const query = new URLSearchParams(window.location.search);
-    let service = query.get("service")?.toLowerCase() || "";
-    let location = query.get("location")?.toLowerCase() || "";
-
-// Fallback for ?category= from category links
-    if (!service && query.get("category")) {
-    service = query.get("category").toLowerCase();
+  <main class="listings-container">
+  <h2 id="category-title"></h2>
+  <div id="listings-container"></div>
+</main>
 
 
-    }
+  <script src="listings.js"></script>
 
-
-    const resultsContainer = document.getElementById("providerResults");
-
-    const filtered = providers.filter(p =>
-      p.category.includes(service) && p.location.includes(location)
-    );
-
-    if (filtered.length > 0) {
-      resultsContainer.innerHTML = filtered.map(p => `
-        <div class="provider-card">
-          <img src="${p.image}" alt="${p.name}" />
-          <h3>${p.name}</h3>
-          <p>Location: ${p.location}</p>
-          <p>📱 WhatsApp: ${p.phone}</p>
-        </div>
-      `).join("");
-    } else {
-      resultsContainer.innerHTML = `<p>No service providers found for "${service}" in "${location}".</p>`;
-    }
-  </script>
-  
 
 </body>
 </html>
